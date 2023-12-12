@@ -225,6 +225,11 @@ humidity-to-location map:
 1723924810 1811943472 182723942
 '''
 
+# better algorithm
+# Compressing layer and then sorting 
+# sampling min at each interval for nearest higher neighbor in input (that will be lowest value) 
+# Exponential WRT to number of layers but it is better than nlogn iteration through all
+
 def binary_search(ranges, source):
     low = 0
     high = len(ranges) -1 
